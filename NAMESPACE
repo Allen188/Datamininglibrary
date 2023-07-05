@@ -2,7 +2,7 @@
 export("ge.convert.geneprot",
        "ge.convert.number",
        "ge.summary.data",
-       "ge.color"，
+       "ge.color",
        "ge.na.ratio",
         "setwd_local",
         "ge.split",
