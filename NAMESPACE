@@ -1,0 +1,15 @@
+
+export("ge.na.ratio","ge.convert.geneprot","ge.convert.number","ge.summary.data","ge.color")
+import("readr",
+                      "plyr",
+                      "readxl",
+                      "stringr",
+                      "magrittr",
+                      "magrittr",
+                      "ggplot2",
+                      "BiocManager",
+                      "pheatmap",
+                      "RColorBrewer",
+                      "umap",
+                      "Rtsne",
+                      "vioplot")
