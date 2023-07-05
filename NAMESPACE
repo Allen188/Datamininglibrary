@@ -1,5 +1,5 @@
 
-export("ge.na.ratio","ge.convert.geneprot","ge.convert.number","ge.summary.data","ge.color")
+export("ge.convert.geneprot","ge.convert.number","ge.summary.data","ge.color")
 import("readr",
                       "plyr",
                       "readxl",
