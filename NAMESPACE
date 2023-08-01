@@ -44,4 +44,8 @@ import("readr",
         "RColorBrewer",
         "umap",
         "Rtsne",
-        "vioplot")
+        "vioplot",
+       "preprocessCore",
+          "speedglm",
+    "corrplot",
+    "UpSetR")

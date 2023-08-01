@@ -1,3 +1,41 @@
+req.pcg.install <- function(pcg){
+  new <- pcg[!(pcg %in% installed.packages()[, "Package"])]
+  if (length(new)) install.packages(new, dependencies = T,
+                                    repos = 'https://mirrors.tuna.tsinghua.edu.cn/CRAN/')
+  sapply(pcg, require, ch = T)
+}
+
+install.pcg <-
+  c(
+    "readr",
+    "plyr",
+    "readxl",
+    "stringr",
+    "magrittr",
+    "magrittr",
+    "ggplot2",
+    "BiocManager",
+    "pheatmap",
+    "RColorBrewer",
+    "umap",
+    "Rtsne",
+    "vioplot",
+    "corrplot",
+    "UpSetR")
+req.pcg.install(install.pcg)
+
+
+req.pcg.BiocManager <- function(pcg) {
+  new <- pcg[!(pcg %in% installed.packages()[, "Package"])]
+  if (length(new))
+    BiocManager::install(new)
+  sapply(pcg, require, ch = T)
+}
+BiocManager.pcg <- c(
+  "preprocessCore",
+  "speedglm")
+req.pcg.BiocManager(BiocManager.pcg)
+
 ge.na.ratio <-  function(x){
   sum(is.na(x))/dim(x)[1]/dim(x)[2]
 }
@@ -937,7 +975,6 @@ auto_preprocess <-
   }
 
 
-library(speedglm)
 mylm <- function(x, y) {
   mylr <- speedlm(y ~ x + 1, data = data.frame(y, x))
   mylr.summary <- summary(mylr)
